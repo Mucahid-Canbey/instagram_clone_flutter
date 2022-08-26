@@ -1,5 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:instagram/pages/account.dart';
+import 'package:instagram/pages/home.dart';
+import 'package:instagram/pages/reels.dart';
+import 'package:instagram/pages/search.dart';
+import 'package:instagram/pages/shop.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -17,12 +22,19 @@ class _HomePageState extends State<HomePage> {
     });
   }
 
-  
+  final List _children = [
+    UserHome(),
+    UserSearch(),
+    UserReels(),
+    UserShop(),
+    UserAccount(),
+  ];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: const Center(child: Text('body')),
+      //Sayfa Geçişleri
+      body: _children[_selectedIndex],
       bottomNavigationBar: BottomNavigationBar(
           currentIndex: _selectedIndex,
           onTap: _gezinenBottomNavbar,
