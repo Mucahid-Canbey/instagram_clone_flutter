@@ -24,10 +24,10 @@ class _HomePageState extends State<HomePage> {
 
   final List _children = [
     UserHome(),
-    UserSearch(),
-    UserReels(),
-    UserShop(),
-    UserAccount(),
+    const UserSearch(),
+    const UserReels(),
+    const UserShop(),
+    const UserAccount(),
   ];
 
   @override
