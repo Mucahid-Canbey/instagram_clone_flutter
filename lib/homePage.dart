@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+
 import 'package:instagram/pages/account.dart';
 import 'package:instagram/pages/home.dart';
 import 'package:instagram/pages/reels.dart';
@@ -13,7 +13,7 @@ class HomePage extends StatefulWidget {
   State<HomePage> createState() => _HomePageState();
 }
 
-class _HomePageState extends State<HomePage> {
+class _HomePageState extends State<HomePage> with _IconsText, _Icons {
   // Mevcut Diziyi seçer | bottom nav bar
   int _selectedIndex = 0;
   void _gezinenBottomNavbar(int index) {
@@ -40,13 +40,29 @@ class _HomePageState extends State<HomePage> {
           onTap: _gezinenBottomNavbar,
           // butonları sığdırmak için =>
           type: BottomNavigationBarType.fixed,
-          items: const [
-            BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
-            BottomNavigationBarItem(icon: Icon(Icons.search), label: 'Search'),
-            BottomNavigationBarItem(icon: Icon(Icons.video_call_outlined), label: 'Reels'),
-            BottomNavigationBarItem(icon: Icon(Icons.shopping_bag_outlined), label: 'Shop'),
-            BottomNavigationBarItem(icon: Icon(Icons.account_circle), label: 'Account')
+          items: [
+            BottomNavigationBarItem(icon: iconHome, label: home),
+            BottomNavigationBarItem(icon: iconSearch, label: search),
+            BottomNavigationBarItem(icon: iconReels, label: reels),
+            BottomNavigationBarItem(icon: iconShop, label: shop),
+            BottomNavigationBarItem(icon: iconAccount, label: account)
           ]),
     );
   }
+}
+
+class _IconsText {
+  String home = 'home';
+  final String search = 'search';
+  final String reels = 'reels';
+  final String shop = 'shop';
+  final String account = 'account';
+}
+
+class _Icons {
+  final iconHome = const Icon(Icons.home);
+  final iconSearch = const Icon(Icons.search);
+  final iconReels = const Icon(Icons.video_call_outlined);
+  final iconShop = const Icon(Icons.shopping_bag_outlined);
+  final iconAccount = const Icon(Icons.account_circle);
 }

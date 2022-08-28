@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:instagram/util/buble_stories.dart';
+import 'package:instagram/util/user_post.dart';
 
 class UserHome extends StatelessWidget with _ColorUtility, _PaddingUtility {
   UserHome({super.key});
@@ -41,7 +42,18 @@ class UserHome extends StatelessWidget with _ColorUtility, _PaddingUtility {
                   itemCount: people.length,
                   itemBuilder: (context, index) {
                     return BubbleStories(text: people[index]);
-                  }))
+                  })),
+
+          //Post
+          Expanded(
+            child: ListView.builder(
+                itemCount: people.length,
+                itemBuilder: (context, index) {
+                  return UserPosts(
+                    name: people[index],
+                  );
+                }),
+          )
         ],
       ),
     );
