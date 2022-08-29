@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:instagram/util/explorer_grid.dart';
 
 class UserSearch extends StatelessWidget with _ColorsProje, _paddingProje, _IconsProje {
   UserSearch({super.key});
@@ -7,34 +8,33 @@ class UserSearch extends StatelessWidget with _ColorsProje, _paddingProje, _Icon
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-          backgroundColor: transparent,
-          elevation: 0,
-          title: ClipRRect(
-            borderRadius: BorderRadius.circular(8),
-            child: Container(
-              padding: paddingSearch,
-              color: grey400,
-              child: Row(
-                children: [
-                  Icon(iconSearch, color: grey600),
-                  Container(
-                    child: Text(
-                      appBarText,
-                      style: TextStyle(color: grey600),
-                    ),
-                  )
-                ],
+        appBar: AppBar(
+            backgroundColor: transparent,
+            elevation: 0,
+            title: ClipRRect(
+              borderRadius: BorderRadius.circular(8),
+              child: Container(
+                padding: paddingSearch,
+                color: grey300,
+                child: Row(
+                  children: [
+                    Icon(iconSearch, color: grey600),
+                    Container(
+                      child: Text(
+                        appBarText,
+                        style: TextStyle(color: grey600),
+                      ),
+                    )
+                  ],
+                ),
               ),
-            ),
-          )),
-      body: Center(child: Text('Search')),
-    );
+            )),
+        body: ExplorerGrid());
   }
 }
 
 class _ColorsProje {
-  Color grey400 = Colors.grey.shade400;
+  Color grey300 = Colors.grey.shade300;
   Color transparent = Colors.transparent;
   Color grey600 = Colors.grey.shade600;
 }
