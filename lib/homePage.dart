@@ -24,10 +24,10 @@ class _HomePageState extends State<HomePage> with _IconsText, _Icons {
 
   final List _children = [
     UserHome(),
-    const UserSearch(),
-    const UserReels(),
-    const UserShop(),
-    const UserAccount(),
+    UserSearch(),
+    UserReels(),
+    UserShop(),
+    UserAccount(),
   ];
 
   @override

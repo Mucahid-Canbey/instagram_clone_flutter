@@ -2,11 +2,14 @@ import 'package:flutter/material.dart';
 
 class UserPosts extends StatelessWidget with _ColorProje, _SizeProje, _PostIcons, _PaddingProje {
   final String name;
-
+// Like Text Bölümü =>
   final String obamaLike = 'obama ';
   final String veLike = 've ';
   final String digerleriLike = 'diğerleri ';
   final String begeniLike = ' beğendi';
+
+  // Caption Text Bölümü=>
+  final aciklama = '"Çocuksu merakınızı her zaman korumalısınız"...';
 
   UserPosts({required this.name});
 
@@ -87,7 +90,7 @@ class UserPosts extends StatelessWidget with _ColorProje, _SizeProje, _PostIcons
 
         //Caption
         Padding(
-          padding: const EdgeInsets.only(left: 16, top: 7),
+          padding: paddingCaption,
           child: Row(
             children: [
               RichText(
@@ -95,7 +98,7 @@ class UserPosts extends StatelessWidget with _ColorProje, _SizeProje, _PostIcons
                   style: TextStyle(color: black),
                   children: [
                     TextSpan(text: name, style: TextStyle(fontWeight: FontWeight.bold)),
-                    TextSpan(text: '"Çocuksu merakınızı her zaman korumalısınız"...'),
+                    TextSpan(text: aciklama),
                   ],
                 ),
               ),
@@ -111,6 +114,7 @@ class _PaddingProje {
   final paddingRow = const EdgeInsets.all(16);
   final paddingIcon = const EdgeInsets.symmetric(horizontal: 12);
   final paddinLike = const EdgeInsets.only(left: 16.0);
+  final paddingCaption = const EdgeInsets.only(left: 16, top: 7);
 }
 
 class _ColorProje {
