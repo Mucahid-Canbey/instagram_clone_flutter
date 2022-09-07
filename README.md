@@ -1,11 +1,14 @@
-![Image](assets/image/1.png)
+![Image](https://raw.githubusercontent.com/Mucahid-Canbey/flutter_note/main/assets/1.png) 
 
 
 
 <center>
-<img src= assets/image/2.png
+
+<img src= https://raw.githubusercontent.com/Mucahid-Canbey/flutter_note/main/assets/2.png
 alt="Logo Kuş" width="400" /></a>
+
 </center>
+
 
 ## Flutter İle Instagram Clone 
 
