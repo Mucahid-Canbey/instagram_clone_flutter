@@ -1,16 +1,50 @@
-# instagram
+![Image](assets/image/1.png)
 
-A new Flutter project.
 
-## Getting Started
 
-This project is a starting point for a Flutter application.
+<center>
+<img src= assets/image/2.png
+alt="Logo Kuş" width="400" /></a>
+</center>
 
-A few resources to get you started if this is your first Flutter project:
+## Flutter İle Instagram Clone 
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Proje içeriği; Flutter ile yapılmış Instagram Clone içermektedir.
+
+---
+
+
+### Installation
+
+Öncelikle projeyi clonelayın.
+
+```
+https://github.com/Mucahid-Canbey/instagram_clone_flutter.git
+```
+
+### Usage
+Projeyi cloneladıktan sonra Visual Studio Code programında açınız.
+
+Linux için:
+```
+instagram_clone_flutter
+code .
+```
+### Contributing
+Pull requestler kabul edilir. Büyük değişiklikler için, lütfen önce neyi değiştirmek istediğinizi tartışmak için bir konu açınız.
+
+### License
+[MIT](https://choosealicense.com/licenses/mit/)
+
+
+
+<hr>
+
+
+<center>
+
+<img src= https://media1.giphy.com/media/RKtYlpeh97sptSUFds/giphy.gif
+alt="Proje İmg Erorr" width="400" /></a>
+
+</center>
